@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Document</title>
+    <style>
+    
+    * {box-sizing: border-box}
+
+    body
+    {
+        
+        background:url(main.png) center no-repeat;       
+        height:100vh;
+        background-size: cover;
+        margin: 0;
+        font-family: Arial;
+    }
+    .login-signup
+
+    {
+        background-color: transparent;   
+        float:right;
+
+    }
+    .login-signup a
+    {
+      border: 2px solid #000000;
+
+       color: #000000;
+        border-radius: 5px;
+        text-decoration: none;
+        padding: 4px 10px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+  
+    .top-bar 
+    {
+        float: right;
+        
+    
+    }
+
+    .top-bar a
+    {
+        text-decoration: none;
+       color: #000000;
+        padding: 4px 10px;
+        margin-right: 5px;
+        margin-left: 5px;
+
+    }
+    .head-menu
+    {
+        margin: 70px;
+    }
+
+    form{
+
+      align-items: center;
+      margin-right: 5px;
+        margin-left: 5px;
+        padding: 10px 10px;
+
+    }
+    .input-group
+    {
+     
+      padding: 10px 10px;
+
+       
+     
+    }
+    .input-group button
+    {
+      color: white;
+      background-color: rgb(106, 179, 62);
+    }
+    .input-group a
+    {
+      text-decoration: none;
+    }
+    .input-group small
+    {
+      align-items: center;
+
+    }
+   .col-md-12
+    {
+     
+        padding: 4px 10px;
+
+    }
+    .col-md-12 a
+    {
+      text-decoration: none;
+      color: white;
+
+    }
+    .row
+    {
+      padding: 10px 10px;
+
+
+    }
+    .already
+    {
+      text-align:center;
+    }
+    .already small a
+    {
+      text-decoration: none;
+      
+    }
+    
+/* Style tab links */
+.tablink {
+  background-color: #DCDCDC	;
+  color: black;
+  float: left;
+  border:none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 50%;
+}
+
+
+
+    .tablink:hover {
+  background-color: white;
+}
+
+    /* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+  </style>
+</head>
+<body>
+    <!--header-->
+    <div class="head-menu"> 
+        <!--login-signup-->
+               <div class="login-signup">
+                         <a href="#" data-toggle="modal" data-target="#exampleModal1"><i class="fa fa-fw fa-user"></i>Login</a>
+                          <a href="#" data-toggle="modal" data-target="#exampleModal2"><i class="fa fa-fw fa-plus"></i>Sign up</a>
+                 </div>
+         <!--login-signup end-->
+         <!--Primary header-->
+         <div class="top-bar">
+               <a href="#">HOME</a>
+               <a href="#">POST A JOB</a>
+               <a href="#">JOB</a>
+           
+         </div>
+          <!--Primary header end-->
+    </div>
+    <!--header end-->         
+   <!-- Modal1 -->
+<div  class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div style="width: 350px;" class="modal-dialog">
+          <div class="modal-content">
+            <div style="background-color: #3396d1;" class="modal-header">
+              <h4  style="color: #ffffff;" class="modal-title" id="exampleModalLabel">LOGIN</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div  class="modal-body">
+              <!--form-->
+            <form action="">
+                
+              <!--username-->
+              <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa fa-fw fa-user"></i></span>
+                  </div>
+                  <input type="text" class="form-control rounded-right" placeholder="Username" required  >
+                  <div class="invalid-feedback">
+                    Please enter a username.
+                  </div>
+                </div>
+                  <!--username end-->
+               <!--password-->
+               <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa fa-fw fa-lock"></i></span>
+                  </div>
+                  <input type="password" class="form-control rounded-right" placeholder="Password" required  >
+                  <div class="invalid-feedback">
+                    Please enter a password.
+                  </div>
+                </div>
+                    <!--password end-->
+                    <!--submit button-->
+                    
+                    <div class="input-group">
+                        
+                          <button type="submit" class="form-control rounded-right">Login</button>
+                          
+                      </div>
+                   <!--submit button end-->
+                      <div class="input-group">
+                        
+                          <small>
+                              <a href="#">Don't have an account?</a>
+                              <a href="#">| Forgot Password</a>
+                              Connect with:
+
+                            </small>
+
+                    </div>
+                    <!--social meadia login-->
+                    <div class="col-md-12" >
+                     <a style="background-color:#3b5998;" href="#" class="form-control rounded-right"><i class="fa fa-fw fa-facebook"></i>Facebook</a>
+                    </div>
+                    <div class="col-md-12">
+                     <a style="background-color: #dd4b39;" href="#" class="form-control rounded-right"><i class="fa fa-fw fa-google"></i>Google</a>
+                    </div>
+                    <div class="col-md-12">
+                     <a style="background-color:#00aced;" href="#" class="form-control rounded-right"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                    </div>
+                    <!--social meadia login end-->
+                    
+                </div>
+            </form>
+            <!--form end-->
+            </div>
+           
+          </div>
+        </div>
+      </div>
+      <!--Modal1 end-->
+
+
+
+
+      <!-- Modal2 -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div  class="modal-dialog">
+      <div class="modal-content">
+        <div style="background-color: #3396d1;" class="modal-header">
+          <h4 style="color: #ffffff;" class="modal-title" id="exampleModalLabel">SIGN UP</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+       
+            <button style="outline: none;" class="tablink" onclick="openPage('PROVIDER', this, 'white')" id="defaultOpen">PROVIDER </button>
+
+            <button style="outline: none;" class="tablink" onclick="openPage('CUSTOMER', this, 'white')" >CUSTOMER</button>
+          
+          <!--provider-->
+             <div id="PROVIDER" class="tabcontent" >
+                <form action="">
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="inputCompany" placeholder="Company Name">
+                      </div>
+
+
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="inputFirst4" placeholder="First Name">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="inputLast4" placeholder="Last Name">
+                      </div>
+                    </div>
+
+
+
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <input type="text" class="form-control" id="inputUser4" placeholder="Userame">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        </div>
+                      </div>
+
+
+
+
+                      <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <input type="password" class="form-control" id="inputPass4" placeholder="Password">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <input type="password" class="form-control" id="inputConfPass" placeholder="Confirm Password">
+                          </div>
+                        </div>
+
+                    
+
+
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+                          </div>
+
+
+                          <div class="form-group">
+                              <input type="text" class="form-control" id="inputAddress" placeholder="Address">
+                            </div>
+
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                  <input type="text" class="form-control" id="inputCountry4" placeholder="Country">
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <input type="text" class="form-control" id="inputConfPass" placeholder="State">
+                                </div>
+                              </div>
+
+
+
+                              <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" id="inputCountry4" placeholder="City">
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" id="inputConfPass" placeholder="Postal Code">
+                                  </div>
+                                </div>
+
+
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                      <input type="text" class="form-control" id="inputCountry4" placeholder="Category">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <input type="text" class="form-control" id="inputConfPass" placeholder="Select a package">
+                                    </div>
+                                  </div>
+
+                    
+                   
+                      
+                      
+                                  <div class="form-group" >
+                                      <button style="background-color: rgb(106, 179, 62); color:white;" type="submit" class="form-control">Sign Up</button>
+                                    </div>
+                    
+                  </form>
+             </div>
+           <!--provider end-->
+           <!--customer-->
+              <div id="CUSTOMER" class="tabcontent">
+           <form action="" >
+              
+                  <div class="row">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Last name">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="col">
+                        <input type="text" class="form-control" placeholder="Username">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" placeholder="Email">
+                      </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Confirm Password ">
+                        </div>
+                      </div>
+                <!--submit-->
+                <div class="input-group">
+                        
+                    <button type="submit" class="form-control rounded-right">Sign Up</button>
+                    
+                </div>
+             <!--submit end-->
+             <div class="already">
+               <small>
+                    <a  href="#">Already Registered?</a><br>     
+                  </small>
+          </div>
+          <div class="col-md-12">
+              <small>
+                   Connect with:
+                 </small>
+         </div>
+         <!--social meadia login-->
+         <div class="col-md-12" >
+            <a style="background-color:#3b5998;" href="#" class="form-control rounded-right"><i class="fa fa-fw fa-facebook"></i>Facebook</a>
+           </div>
+           <div class="col-md-12">
+            <a style="background-color: #dd4b39;" href="#" class="form-control rounded-right"><i class="fa fa-fw fa-google"></i>Google</a>
+           </div>
+           <div class="col-md-12">
+            <a style="background-color:#00aced;" href="#" class="form-control rounded-right"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+           </div>
+           <!--social meadia login end-->
+
+            </form>
+           </div>
+           <!--customer end-->
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!--Modal2 end-->
+  
+
+      
+
+
+
+<form action="">
+  <div class="form-row" style="margin-top: 500px; padding: 0px 70px;">
+      <div class="form-group col-md-2">
+        <input style="margin-right: 500px;" type="text" class="form-control" id="inputCountry4" placeholder="Keyword">
+      </div>
+      <div class="form-group col-md-2">
+        <input type="text" class="form-control" id="inputConfPass" placeholder="Address">
+      </div>
+
+      <div class="form-group col-md-2">
+          <input type="text" class="form-control" id="inputCountry4" placeholder="Category">
+        </div>
+        <div class="form-group col-md-2">
+          <input type="text" class="form-control" id="inputConfPass" placeholder="Country">
+        </div>
+
+        <div class="form-group col-md-2">
+            <input type="text" class="form-control" id="inputCountry4" placeholder="City">
+          </div>
+          <div class="form-group col-md-2">
+              <button style="background-color: rgb(106, 179, 62); color:white;" type="submit" class="form-control">Find Provider</button>
+            </div>
+ </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+<!--javascript for provider customer-->
+<script>
+    function openPage(pageName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+<!--javascript for provider customer end-->
+
+      
+</body>
+</html>
